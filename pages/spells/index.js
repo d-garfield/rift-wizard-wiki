@@ -1,4 +1,3 @@
-import { VALID_LOADERS } from "next/dist/server/image-config";
 import spellsList from "../../components/data/spells.json"
 import SpellBox from "../../components/riftWizardComponents/spellBox";
 
