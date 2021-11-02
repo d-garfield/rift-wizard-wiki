@@ -1,4 +1,4 @@
-const SpellBox = ({title , schools, level, charges, range }) => {
+const SpellBox = ({title , schools, level, charges, range, upgrades }) => {
 	return ( 
 		<div className="border-box pt2 ph1 mb2  b--light-silver hover-bg-near-black w-100 v-mid dib-l ba db-m ">
 			<span className="w-20 f5 v-mid dib-l db-m b">{title}</span>
@@ -8,11 +8,20 @@ const SpellBox = ({title , schools, level, charges, range }) => {
 				<div className=" w-40 ">
 					{schools.length>0 && 
 						<div className="">
-						<span className="">Schools: </span>
+						<span className="">Type: </span>
 						{schools.map( (string,ind) => {
 							if ( ind == schools.length-1 ){return <span key={ind}> {string} </span>}{return <span key={ind}> {string}, </span>}
 						}
 							) }
+							{upgrades.length > 0 &&
+							<div className="">
+							<span>Upgrades: </span>
+							<hr/>
+							{upgrades.map(({ title, description, cost }, idx) => {
+								return <span key={idx}>{title +" - "+ description +"  -  SP: "+ cost + (idx === upgrades.length - 1 ? " " : " ")}<hr/></span>
+							})}
+							</div>
+							}
 						</div>
 					}
 				</div>

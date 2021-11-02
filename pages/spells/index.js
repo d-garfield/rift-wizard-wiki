@@ -3,6 +3,7 @@ import SpellBox from "../../components/riftWizardComponents/spellBox";
 
 
 
+
 const Spells = () => {
 
 
@@ -15,6 +16,7 @@ const Spells = () => {
 			level={val.level}
 			charges={val.charges}
 			range={val.range}
+			upgrades={val.upgrades}
 			/>
 	) )
 
