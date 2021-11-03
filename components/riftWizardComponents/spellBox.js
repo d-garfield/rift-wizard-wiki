@@ -7,47 +7,45 @@ const SpellBox = ({title , schools, level, charges, range, upgrades }) => {
 	
 	return ( 
 		<div className="border-box pt2 ph1 mb2  b--light-silver hover-bg-near-black w-100 v-mid dib-l ba db-m " onClick={toggle}>
-			<span className="w-20 f5 v-mid dib-l db-m b">{title}</span>
+				<span className="w-20 f5 v-mid dib-l db-m b">{title}</span>
 
-			<div className="flex-l flex-row-l db-m">
+				<div className="flex-l flex-row-l db-m">
 
-				<div className=" w-40 ">
-					{schools.length>0 && 
-						<div className="">
-						<span className="">Type: </span>
-						{schools.map( (string,ind) => {
-							if ( ind == schools.length-1 ){return <span key={ind}> {string} </span>}{return <span key={ind}> {string}, </span>}
-						}
-							) }
-							
-							{upgrades.length > 0 &&
+					<div className=" w-40 ">
+						{schools.length > 0 &&
 							<div className="">
-							<span>Upgrades: </span>
-							<div className="expand" style={{display: showMe?"none":"block"}}>(click to expand)</div>
-							
-							<div className="upgrades" style={{display: showMe?"block":"none"}}>
-							<hr/>
-							{upgrades.map(({ title, description, cost }, idx) => {
-								return <span key={idx}>{title +" - "+ description +"  -  SP: "+ cost + (idx === upgrades.length - 1 ? " " : " ")}<hr/></span>
-							})}
-							</div>
-							</div>
-							}
-						</div>
-					}
+								<span className="">Type: </span>
+								{schools.map((string, ind) => {
+									if (ind == schools.length - 1) { return <span key={ind}> {string} </span>; } { return <span key={ind}> {string}, </span>; }
+								}
+								)}
+
+								{upgrades.length > 0 &&
+									<div className="">
+										<span>Upgrades: </span>
+										<div className="expand" style={{ display: showMe ? "none" : "block" }}>(click to expand)</div>
+
+										<div className="upgrades" style={{ display: showMe ? "block" : "none" }}>
+											<hr />
+											{upgrades.map(({ title, description, cost }, idx) => {
+												return <span key={idx}>{title + " - " + description + "  -  SP: " + cost + (idx === upgrades.length - 1 ? " " : " ")}<hr /></span>;
+											})}
+										</div>
+									</div>}
+							</div>}
+					</div>
+
+					<span className="w-10">Level: {level}</span>
+					<span className="w-10">Charges: {charges}</span>
+					<span className="w-10">Range: {range}</span>
 				</div>
 
-				<span className="w-10">Level: {level}</span>
-				<span className="w-10">Charges: {charges}</span>
-				<span className="w-10">Range: {range}</span>
+
+
+
+
+				<p>  </p>
 			</div>
-			
-
-
-
-
-			<p>  </p>
-		</div>
 	 );
 }
  

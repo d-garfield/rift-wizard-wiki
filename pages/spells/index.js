@@ -26,7 +26,22 @@ const Spells = () => {
 	return ( 
 		<div className="w-80 ml-auto mr-auto">
 			<h1>Spells</h1>
-
+			<ul className="typeList">Lightning
+				Ice
+				Nature
+				Sorcery
+				Fire:
+				Holy
+				Dark
+				Arcane
+				Enchantment
+				Conjuration
+				Word
+				Orb
+				Dragon
+				Translocation
+				Eye
+				Chaos</ul>
 			<ul className="mainList">
 				{list}
 			</ul>
