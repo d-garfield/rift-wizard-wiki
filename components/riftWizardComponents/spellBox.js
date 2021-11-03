@@ -23,7 +23,7 @@ const SpellBox = ({title , schools, level, charges, range, upgrades }) => {
 							{upgrades.length > 0 &&
 							<div className="">
 							<span>Upgrades: </span>
-							<div className="expand">(click to expand)</div>
+							<div className="expand" style={{display: showMe?"none":"block"}}>(click to expand)</div>
 							
 							<div className="upgrades" style={{display: showMe?"block":"none"}}>
 							<hr/>
