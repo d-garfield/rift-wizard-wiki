@@ -27,7 +27,7 @@ const Spells = () => {
 		<div className="w-80 ml-auto mr-auto">
 			<h1>Spells</h1>
 
-			<ul>
+			<ul className="mainList">
 				{list}
 			</ul>
 

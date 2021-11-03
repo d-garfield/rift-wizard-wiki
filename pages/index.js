@@ -16,8 +16,8 @@ export default function Home() {
 
       <div id="linkSection" className="pt3 tc">
           <RwTextLink _href="/spells" text="Spells"></RwTextLink> <br />
-          <RwTextLink _href="/Shrines" text="Shrines"></RwTextLink><br />
-          <RwTextLink _href="/Skills" text="Skills"></RwTextLink><br />
+          <RwTextLink _href="/shrines" text="Shrines"></RwTextLink><br />
+          <RwTextLink _href="/skills" text="Skills"></RwTextLink><br />
 
         
       </div>

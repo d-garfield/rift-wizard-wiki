@@ -12,3 +12,31 @@ footer {
   color: white;
   font-family: 'Cutive Mono', monospace;
 }
+.upgrades{
+  display:none;
+}
+.expand{
+  display:inline;
+}
+
+.mainList{padding-inline-start: 0px}
+
+/*
+in game colours
+      Lightning: #fced55
+      Ice: #4ec3f5
+      Nature: #457842
+      Sorcery: #a21241
+      Fire: #e11d25
+      Holy: #f5fa91
+      Dark: #9c27b2
+      Arcane: #f06191
+      Enchantment: #2fa48d
+      Conjuration: #f86a6e
+      Word: #f8d74a
+      Orb: #fba8bb
+      Dragon: #a21306
+      Translocation: #bb68c7
+      Eye: #eeeeee
+      Chaos: #dc9245
+*/

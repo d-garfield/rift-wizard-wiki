@@ -22,7 +22,7 @@ const Shrines = () => {
 		<div className="w-80 ml-auto mr-auto">
 			<h1>Shrines</h1>
 
-			<ul>
+			<ul className="mainList">
 				{list}
 			</ul>
 

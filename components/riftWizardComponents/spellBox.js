@@ -1,6 +1,12 @@
+import { useState } from "react";
 const SpellBox = ({title , schools, level, charges, range, upgrades }) => {
+	const [showMe, setShowMe] = useState(false);
+  function toggle(){
+    setShowMe(!showMe);
+  }
+	
 	return ( 
-		<div className="border-box pt2 ph1 mb2  b--light-silver hover-bg-near-black w-100 v-mid dib-l ba db-m ">
+		<div className="border-box pt2 ph1 mb2  b--light-silver hover-bg-near-black w-100 v-mid dib-l ba db-m " onClick={toggle}>
 			<span className="w-20 f5 v-mid dib-l db-m b">{title}</span>
 
 			<div className="flex-l flex-row-l db-m">
@@ -13,13 +19,18 @@ const SpellBox = ({title , schools, level, charges, range, upgrades }) => {
 							if ( ind == schools.length-1 ){return <span key={ind}> {string} </span>}{return <span key={ind}> {string}, </span>}
 						}
 							) }
+							
 							{upgrades.length > 0 &&
 							<div className="">
 							<span>Upgrades: </span>
+							<div className="expand">(click to expand)</div>
+							
+							<div className="upgrades" style={{display: showMe?"block":"none"}}>
 							<hr/>
 							{upgrades.map(({ title, description, cost }, idx) => {
 								return <span key={idx}>{title +" - "+ description +"  -  SP: "+ cost + (idx === upgrades.length - 1 ? " " : " ")}<hr/></span>
 							})}
+							</div>
 							</div>
 							}
 						</div>
@@ -30,6 +41,7 @@ const SpellBox = ({title , schools, level, charges, range, upgrades }) => {
 				<span className="w-10">Charges: {charges}</span>
 				<span className="w-10">Range: {range}</span>
 			</div>
+			
 
 
 

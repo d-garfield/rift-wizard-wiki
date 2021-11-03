@@ -24,7 +24,7 @@ const Skills = () => {
 		<div className="w-80 ml-auto mr-auto">
 			<h1>Skills</h1>
 
-			<ul>
+			<ul className="mainList">
 				{list}
 			</ul>
 
