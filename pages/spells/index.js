@@ -26,11 +26,12 @@ const Spells = () => {
 	return ( 
 		<div className="w-80 ml-auto mr-auto">
 			<h1>Spells</h1>
-			<ul className="typeList">Lightning
+			<ul className="typeList">
+				Lightning
 				Ice
 				Nature
 				Sorcery
-				Fire:
+				Fire
 				Holy
 				Dark
 				Arcane

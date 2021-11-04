@@ -18,6 +18,7 @@ export default function Home() {
           <RwTextLink _href="/spells" text="Spells"></RwTextLink> <br />
           <RwTextLink _href="/shrines" text="Shrines"></RwTextLink><br />
           <RwTextLink _href="/skills" text="Skills"></RwTextLink><br />
+          <RwTextLink _href="/enemies" text="Enemies"></RwTextLink><br />
 
         
       </div>
